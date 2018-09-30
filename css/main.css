@@ -1,0 +1,16 @@
+#text-field {
+  height: 250px;
+  width: 500px;
+}
+
+#send-button {
+  margin: 0px 10px;
+}
+
+.cursor {
+  height: 5px;
+  width: 5px;
+  position: fixed;
+  border: solid 1px black;
+  border-radius: 50%;
+}

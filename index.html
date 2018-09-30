@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Realtime communication with WebRTC</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body onmousemove="mouseMove(event)">
+  <h1>Realtime communication with WebRTC</h1>
+
+  <textarea id="text-field"></textarea>
+  <button id="send-button">Send</button>
+
+  <hr>
+
+  <div id="chat-output"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
