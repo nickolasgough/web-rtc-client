@@ -258,14 +258,20 @@ function sendText(){
     var data = {data: `${message}`};
     messageField.value = '';
     chatOutput.innerHTML = `${message}<br/>${chatOutput.innerHTML}`;
-    dataChannel.send(JSON.stringify(data));
+    transmitMessage(JSON.stringify(data));
 }
 
 function mouseMove(event){
     var x = event.clientX;
     var y = event.clientY;
     var position = {data: {x: x, y: y, id: id}};
-    dataChannel.send(JSON.stringify(position));
+    transmitMessage(JSON.stringify(position));
+}
+
+function transmitMessage(message) {
+    if (dataChannel) {
+        dataChannel.send(message);
+    }
 }
 
 function randomToken() {
